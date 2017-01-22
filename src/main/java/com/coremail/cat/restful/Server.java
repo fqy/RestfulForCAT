@@ -21,9 +21,9 @@ public class Server {
         try {
             String ip = "";
             ip = InetAddress.getLocalHost().getHostAddress();
-            URI BASE_URI = URI.create("http://" + ip + ":8888/Test");
+            URI BASE_URI = URI.create("http://" + ip + ":8888/");
 
-            System.out.println("启动成功！请访问http://" + ip + ":8888/Test");
+            System.out.println("启动成功！请访问http://" + ip + ":8888/");
 
             final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(BASE_URI, createApp(), false);
             Runtime.getRuntime().addShutdownHook(
